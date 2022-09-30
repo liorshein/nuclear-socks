@@ -1,0 +1,169 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    background-image: url("../assets/background.png");
+    background-repeat: repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: max(100%, 2000px);
+    overflow: hidden;
+    font-family: "Ubuntu Mono", monospace;
+    color: #40a479;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #40a479;
+
+    .logo {
+        margin-left: 20px;
+        height: 50px;
+        width: 50px;
+    }
+    .links {
+        margin: 15px 15px 0px 0px;
+        & > a {
+            margin-right: 15px;
+            margin-left: 15px;
+            text-decoration: none;
+            color: #40a479;
+            font-size: 20px;
+            border-bottom: 2px solid transparent;
+            transition: all 0.2s ease-in;
+
+            &:hover {
+                border-bottom: 2px solid #40a479;
+            }
+        }
+    }
+}
+
+.inputs {
+    display: flex;
+    margin-top: 40px;
+    justify-content: center;
+
+    & > button {
+        margin-right: 10px;
+        background-color: transparent;
+        color: #40a479;
+        padding: 5px 10px 5px 5px;
+    }
+
+    & > label,
+    input,
+    select,
+    option {
+        margin-right: 10px;
+        background-color: transparent;
+        color: #40a479;
+        padding: 5px 10px 5px 5px;
+        border: 2px solid #40a479;
+    }
+
+    input::placeholder {
+        color: #40a479;
+    }
+
+    & > select:focus-visible {
+        outline: none;
+    }
+
+    & > label {
+        margin-right: 0;
+        font-weight: bold;
+        border: none;
+    }
+
+    select > option {
+        background-color: #01130b;
+        color: #40a479;
+    }
+}
+
+::-webkit-calendar-picker-indicator {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 24 24"><path fill="%23bbbbbb" d="M20 3h-1V1h-2v2H7V1H5v2H4c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 18H4V8h16v13z"/></svg>');
+    filter: invert(57%) sepia(11%) saturate(1866%) hue-rotate(102deg) brightness(94%) contrast(85%);
+}
+
+.table-container {
+    margin: 50px 50px 0px 50px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    .table {
+        border: 2px solid #40a479;
+        width: 100%;
+        border-collapse: collapse;
+        text-align: center;
+        .headers {
+            border: 2px solid #40a479;
+            th {
+                border: 2px solid #40a479;
+            }
+
+            .btn-cell {
+                width:  101.328px;
+            }
+        }
+        .content {
+            .table-row {
+                border: 2px solid #40a479;
+                & > td {
+                    border: 2px solid #40a479;
+
+                    & > button {
+                        width: 100%;
+                        background-color: transparent;
+                        font-weight: bold;
+                        color: #40a479;
+                        
+                        & > a{
+                            color: #40a479;
+                            text-decoration: none;
+                        }
+
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.return-btn {
+    width: 60px;
+    background-color: transparent;
+    color: #40a479;
+    font-weight: bold;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.hidden-id {
+    display: none;
+}
